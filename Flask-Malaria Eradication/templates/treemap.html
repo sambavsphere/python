@@ -1,0 +1,28 @@
+<!doctype html>
+<meta charset="utf-8">
+<!-- load D3js -->
+<script src="http://www.d3plus.org/js/d3.js"></script>
+<!-- load D3plus after D3js -->
+<script src="http://www.d3plus.org/js/d3plus.js"></script>
+<!-- create container element for visualization -->
+<div id="viz"></div>
+<script>
+var sample_data=[]
+var countries=['AFG', 'AGO', 'ARG', 'ARM', 'AZE', 'BDI', 'BEN', 'BFA', 'BGD', 'BHS', 'BLZ', 'BOL', 'BRA', 'BTN', 'BWA', 'CAF','CHN', 'CIV', 'CMR', 'COD', 'COG', 'COL', 'COM', 'CPV', 'CRI', 'DJI', 'DOM', 'DZA', 'ECU', 'EGY', 'ERI', 'ETH', 'GAB', 'GEO', 'GHA', 'GIN', 'GMB', 'GNB', 'GNQ', 'GTM', 'GUY', 'HND', 'HTI', 'IDN', 'IND', 'IRN', 'IRQ', 'JAM', 'KEN', 'KGZ', 'KHM', 'KOR', 'LAO', 'LBR', 'LKA', 'MAR', 'MDG', 'MEX', 'MLI', 'MMR', 'MOZ', 'MRT', 'MWI', 'MYS', 'NAM', 'NER', 'NGA', 'NIC', 'NPL', 'OMN', 'PAK', 'PAN', 'PER', 'PHL', 'PNG', 'PRK', 'PRY', 'RUS', 'RWA', 'SAU', 'SDN', 'SEN', 'SLB', 'SLE', 'SLV', 'SOM', 'SSD', 'STP', 'SUR', 'SWZ', 'SYR', 'TCD', 'TGO', 'THA', 'TJK', 'TKM', 'TLS', 'TUR', 'TZA', 'UGA', 'UZB', 'VEN', 'VNM', 'VUT', 'YEM', 'ZAF', 'ZMB', 'ZWE']
+data_group_year_values={{ data_group_year_values }}
+// sample data array
+for (var i = 0; i< countries.length ; i++) {
+	sample_data.push({"value": data_group_year_values[i]/100, "name": countries[i]})
+	
+};
+console.log(sample_data)
+
+// instantiate d3plus
+var visualization = d3plus.viz()
+.container("#viz") // container DIV to hold the visualization
+.data(sample_data) // data to use with the visualization
+.type("tree_map") // visualization type
+.id("name") // key for which our data is unique on
+.size("value") // sizing of blocks
+.draw() // finally, draw the visualization!
+</script>

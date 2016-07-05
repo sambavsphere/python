@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Malaria Eradication</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href={{ url_for('static', filename='./bower_components/bootstrap/dist/css/bootstrap.min.css') }} rel="stylesheet" media="screen">
+    <link href={{ url_for('static', filename='main.css') }} rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h2>Maleria desease analysis <a href="http://apps.who.int/gho/data/node.main.A1367?lang=en">Data reference</a></h2>
+      <a href="/bar/">Barchart</a><br>
+      <a href="/circle/">Circle</a><br>
+      <a href="/scaterplot/">Scater plot</a><br>
+      <a href="/treemap/">Tree Map</a><br>
+      <a href="/statistics/">Statistics</a><br>
+    </div>
+    <script src={{ url_for('static', filename='./bower_components/jquery/dist/jquery.min.js') }}></script>
+    <script src={{ url_for('static', filename='./bower_components/bootstrap/dist/js/bootstrap.min.js') }}></script>
+    <script src={{ url_for('static', filename='./bower_components/d3/d3.min.js') }}></script>
+    <script src={{ url_for('static', filename='main.js') }}></script>
+  </body>
+</html>
