@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Circle view</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href={{ url_for('static', filename='./bower_components/bootstrap/dist/css/bootstrap.min.css') }} rel="stylesheet" media="screen">
+    <link href={{ url_for('static', filename='main.css') }} rel="stylesheet" media="screen">
+    </head>
+  <body>
+    <div class="container">
+     <svg height="30" width="1000">
+      <text x="0" y="15" fill="green">Below circles showing  total malaria deaths country wise.(Moues over on circle to get count--country)</text>
+    </svg> 
+    </div>
+    <script src={{ url_for('static', filename='./bower_components/jquery/dist/jquery.min.js') }}></script>
+    <script src={{ url_for('static', filename='./bower_components/bootstrap/dist/js/bootstrap.min.js') }}></script>
+    <script src={{ url_for('static', filename='./bower_components/d3/d3.min.js') }}></script>
+    <script type="text/javascript">
+    var data_group_country_values={{ data_group_country_values }}
+    var countries=['AFG', 'AGO', 'ARG', 'ARM', 'AZE', 'BDI', 'BEN', 'BFA', 'BGD', 'BHS', 'BLZ', 'BOL', 'BRA', 'BTN', 'BWA', 'CAF', 'CHN', 'CIV', 'CMR', 'COD', 'COG', 'COL', 'COM', 'CPV', 'CRI', 'DJI', 'DOM', 'DZA', 'ECU', 'EGY', 'ERI', 'ETH', 'GAB', 'GEO', 'GHA', 'GIN', 'GMB', 'GNB', 'GNQ', 'GTM', 'GUY', 'HND', 'HTI', 'IDN', 'IND', 'IRN', 'IRQ', 'JAM', 'KEN', 'KGZ', 'KHM', 'KOR', 'LAO', 'LBR', 'LKA', 'MAR', 'MDG', 'MEX', 'MLI', 'MMR', 'MOZ', 'MRT', 'MWI', 'MYS', 'NAM', 'NER', 'NGA', 'NIC', 'NPL', 'OMN', 'PAK', 'PAN', 'PER', 'PHL', 'PNG', 'PRK', 'PRY', 'RUS', 'RWA', 'SAU', 'SDN', 'SEN', 'SLB', 'SLE', 'SLV', 'SOM', 'SSD', 'STP', 'SUR', 'SWZ', 'SYR', 'TCD', 'TGO', 'THA', 'TJK', 'TKM', 'TLS', 'TUR', 'TZA', 'UGA', 'UZB', 'VEN', 'VNM', 'VUT', 'YEM', 'ZAF', 'ZMB', 'ZWE']
+
+
+    var mySVG = d3.select("body")
+      .append("svg")
+      .attr("width", 3000) 
+      .attr("height", 1000)
+      .style('position','absolute')
+      .style('top',50)
+      .style('left',40)
+      .attr('class','fig');
+    var heightScale = d3.scale.linear()
+      .domain([0, d3.max(data_group_country_values)])
+      .range([0, 100]);
+    var myCircles = mySVG.selectAll('circle')
+      .data(data_group_country_values)
+      .enter()
+      .append('svg:circle')
+      .attr('r',function(d,i) {return heightScale(d);})
+      .attr('cx',function(d,i) {return (i * 22) + 100;})
+      .attr('cy',function(d,i) {return 400 - heightScale(d);})
+      .attr('title',function(d,i){ return d+'--'+countries[i];})
+      .text(function(d,i){ return d; })
+      .style('fill','green')
+      .style('stroke','red')
+      .style('stroke-width',5)
+      .append("g");
+
+
+    
+
+   
+   
+   </script>
+   </body>
+   </html>

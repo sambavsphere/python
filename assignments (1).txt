@@ -1,0 +1,367 @@
+1. copy 1 file content in to another file
+2. delete,replace mentioned word from a file 
+3. number of lines, words, characters
+4. convert .txt file in .json
+l=[1,2,3] just make it a string.
+l=[1,2,3,[4,5,6],7,[8,9,10]] for single dimentional list
+
+
+
+Assignment 1: 
+find the start position of the largest block of repeated characters in a given string
+import re
+s=raw_input("Enter String: ")
+max_word=max([max(re.findall(c+'+',s),key=len) for c in set(s)],key=len)
+print "max_word: ",max_word, "length: ",len(max_word),"index: ",s.find(max_word)
+
+Assignment 2:
+get union and intersection of lists:
+l=[1,2,3,4,5,6]
+l1=[1,7,2,8,9]
+print set(l) & set(l1)
+print set(l) | set(l1)
+
+Assignment 3:
+input: fun(5)
+output: [1,2,3,4,3,2,1]
+def fun(v):
+    l=range(v)
+    l1=range(v)
+    l1.reverse()
+    return l+l1[1:]
+
+Assignment 4:
+ Make two dimentional list to one dimentional:
+l2=[]
+l=[1,2,3,[1,2,3],4,[5,7]]
+for i in l:
+	if isinstance(i,list):
+		l2.extend(i)
+	else:
+		l2.append(i)
+print l2
+
+Assignment 5:
+input fun('abc')
+output: [[],][a],[b],[c],[a,b],[b,c],[c,a],[a,b,c]]
+def fy(s):
+    result=[]
+    result.append([])
+    for i in range(len(s)+1): 
+        for j in range(i):
+            result.append(list(s[j:i]))
+    result.append([s[-1],s[0]])
+    print result
+fy('abc')
+
+Assignment 6:
+Remove duplicates from the list:
+a=[1,2,3,2,3,4,1,,3,4]
+s=set(a)
+s1=s.copy()
+a=[s.pop() for i in s1][::1]
+Assignment 7:
+scores =  {"classScore":[("mohan", 80), ("satish", 90), ("purnesh", 40), ("venkat", 30)]} sort the list in assignding order of marks..
+import operator
+scores =  {"classScore":[("mohan", 80), ("satish", 90), ("purnesh", 40), ("venkat", 30)]}
+scores1=    {"classScore": sorted(scores['classScore'],key=operator.itemgetter(1))}
+print  scores1
+
+Asignment 8:
+Write the difference between sort and sorted method in python
+	alist = [1, 3, 2]
+	alist.sort()
+	alist
+	output:
+	[1, 2, 3]
+		alist.sorted()
+			Traceback (most recent call last):
+			  File "<stdin>", line 1, in ?
+			AttributeError: 'list' object has no attribute 'sorted'
+		 alist = [1, 3, 2]
+		sorted(alist)
+			output:
+			[1, 2, 3]
+
+	sort() is a method of list.  As explained, it sorts the list in place
+	and it does not return the list as a reminder of that fact.
+
+	sorted() is a builtin function, not a method on list, because it's
+	more general taking any iterator as its first argument (for example an
+	open file), not just a list.  It of course does return a list.
+Assignment 9:
+Can we use a list for a key in dictionary ?
+Ans: No, because list is mutable object. Dictionary accpet only immutable object as a key.
+
+Assignment 10:
+
+           1) My name is, Nagesh
+           2) I am from , Hyderabad
+           3) I studied MCA in, CBIT
+read the lines in text file and write data to a csv file with question in one column and responses in other column.
+
+Ans:
+try:
+    f1=open("text1.txt")
+    f2=open("text2.csv",'w')
+    f2.write("question,answer\n")
+    for i in f1.readlines():
+        f2.write(i)
+except Exception as err:
+    print err
+finally:
+    f1.close()
+    f2.close()
+
+
+Assignment 11:
+l=['1','2','3'] get the sum of the list
+sum(map(int,l))
+
+Assignment 11:
+l1=[1,2,3,4] l2=[5,6,7,8]
+[i+j for (i,j) in zip(l2,l1)]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.calculate lines, words, characters in a file.
+
+modify the file content(add content,modfy content,delete content).
+include a line in a file. Get that line from the user.
+copy the .txt file content in to .json file in json format.
+copy the content of file in to another file (check whether given file for read existed or not, if the write file is exist
+prompt a message to the user. take two file names as command line or from the user)
+get union and intersection of lists:
+
+Make two dimentional list to one dimentional:
+input: fun(5)
+output: [1,2,3,4,3,2,1]
+
+input fun('abc')
+output: [[],][a],[b],[c],[a,b],[b,c],[c,a],[a,b,c]]
+
+
+
+
+
+vector mathematics:
+import math
+class class_vector():
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+        self.v=(x,y)
+    def __str__(self):
+        return "("+str(x)+","+str(y)+")"
+    def __add__(self):
+        return [i+j for (i,j) in zip(self.v,self.v)]
+    def __sub__(self):
+        return [i-j for (i,j) in zip(self.v,self.v)]
+    def __mul__(self):
+        return sum([i*j for (i,j) in zip(self.v,self.v)])
+    def __magitude__(self):
+        return math.sqrt(self.x**2+self.y**2)
+x=int(raw_input("Enter x value: "))
+y=int(raw_input("Enter y value: "))
+obj_vector=class_vector(x,y)
+print "Vector: ",obj_vector.__str__()
+print "adittion of vectors (",x,y,"),(",x,y,"): ",obj_vector.__add__()
+print "Substraction of vectors (",x,y,"),(",x,y,"): ",obj_vector.__sub__()
+print "Multiplication of vectors (",x,y,"),(",x,y,"): ",obj_vector.__mul__()
+print "Magnitude of vector (",x,y,"): ",obj_vector.__magitude__()
+
+
+
+
+
+
+The Problem
+Scientists measure how closely related a species is by looking at the DNA sequences for key
+proteins and seeing how similar/dissimilar they are. If the two sequences of DNA are essentially
+the same, the two species are considered to be evolutionarily closer since there is a relationship
+between changes and time. This process is called sequence alignment.
+Consider the two strings of DNA below:
+Species 1: AATAACGAAA
+Species 2: AAAACGAAAA
+A scientist can change the alignment by assuming that an insertion or deletion, of one of the
+bases has occurred. They could make such a change, called an indel for short, to see if it
+improves the alignment:
+Species 1: AATAACGAAA-
+Species 2: AA-AACGAAAA
+Assuming two indels, marked as two dashes(-), the alignment is greatly improved. The scientist
+would assume that two changes happened, one change in each species.
+While complex algorithms exist to do sequence alignment, it is also useful to support a
+researcher and allow them to do an alignment by hand.
+Project Specification
+1. You will prompt for two strings. The strings can have any characters you like, but to be
+"biological" it should consist of: "A", "T", "C", "G". The strings do not have to be of the
+same length.
+2. You will then prompt for one of 3 commands:
+a. "a" for add. Add an indel
+b. "d" for delete. Delete an indel
+c. "s" for score. Score the present alignment
+d. "q" for quit. Stop the process.
+3. Adding an Indel. When you add an indel, you must prompt for two pieces of
+information:CS 61002 Algorithms and Programming I
+a. which string to change
+b. at what index (starting at 0) do you wish to place the indel (placement is before
+the given index, Error if the index is out of range).
+The string should then be modified and a dash(-) added.
+4. Delete an Indel: If you can add an indel, you should be able to delete it if it doesn't do
+what you want. Again, you must prompt for two pieces of information
+a. which string to change
+b. the index (starting at 0) to delete the indel. It is an Error to delete a character
+that is not an indel.
+5. Scoring. You will report the number of matches and the number of mismatches.
+a. Any indel is automatically a mismatch.
+b. If one string is shorter than the other, the shorter string is filled out with indels.
+c. After you score, you print both strings.
+i. Matching characters are printed in lower case. If the user entered upper
+case letters, you convert them to lower case on a match.
+ii. All mismatches are printed in upper cas
+ANS:
+
+
+
+import sys
+while True:
+    str1=raw_input("Enter String1: ")
+    while True:
+            str1_upper=str1.upper()
+            if str1_upper == 'Q':
+              sys.exit()  
+            if 'A' in str1_upper and 'T' in str1_upper and 'C' in str1_upper and 'G' in str1_upper:
+                break
+            else:
+                print "Entered sting is invalid!"
+                str1=raw_input("Enter String1 or Enter q to exit: ")
+                continue
+    str2=raw_input("Enter String2: ")
+    while True:
+            str2_upper=str2.upper()
+            if str2_upper == 'Q':
+              sys.exit()  
+            if 'A' in str2_upper and 'T' in str2_upper and 'C' in str2_upper and 'G' in str2_upper:
+                break
+            else:
+                print "Entered sting is invalid!"
+                str2=raw_input("Enter String2 or Enter q to exit: ")
+                continue
+    
+    while True:
+        str1_list=list(str1)
+        str2_list=list(str2)
+        repeat=False
+        print """
+            "a" for add. Add an indel
+            "d" for delete. Delete an indel
+            "s" for score. Score the present alignment
+            "q" for quit. Stop the process.
+            "r" for repeat the evaluation
+            """
+        flag=raw_input('Enter option: ')
+        if flag=="a":
+            which_string=raw_input("Which String to change (1/2): ")
+            which_index=raw_input("Index to place: ")
+            indel=raw_input("Enter indel: ")
+            if which_string=="1":
+                str1_list.insert(int(which_index),indel)
+                str1="".join(str1_list)
+            elif which_string=="2":
+                str2_list.insert(int(which_index),indel)
+                str2="".join(str2_list)
+        elif flag=="d":
+            string_delete=raw_input("Which String to change (1/2): ")
+            delete_index=raw_input("Index to place: ")
+            if string_delete=="1":
+                str1_list.pop(int(delete_index))
+                str1="".join(str1_list)
+            elif string_delete=="2":
+                str2_list.pop(int(delete_index))
+                str2="".join(str2_list)
+        elif flag=="s":
+                match=0
+                mis_match=0
+                #matches=sum([a for a, b in zip(str1, str2) if a==b])
+                #mis_matches=sum([a for a, b in zip(str1, str2) if a!=b])
+                index=-1
+                for i,j in zip(str1_list,str2_list):
+                    index+=1
+                    if i==j:
+                        match+=1
+                        str1_list[index]=str(str1_list[index]).upper()
+                        str2_list[index]=str(str2_list[index]).upper()
+                        
+                    else:
+                        mis_match+=1
+                        str1_list[index]=str(str1_list[index]).lower()
+                        str2_list[index]=str(str2_list[index]).lower()
+                str2="".join(str2_list)
+                str1="".join(str1_list)
+                print "string1: ",str1
+                print "string2: ",str2
+                print "matches: ",match
+                print "mis_matches: ",mis_match
+                
+        elif flag=="q": 
+                sys.exit()
+        elif flag=="r":
+            repeat=True
+            break
+    if repeat:
+        continue
+    else:
+        break
+s='BJAQFDTIDGHATMRBJA'
+print the abve string like BJA->QFD->TID->GHA->TMR
+
+ANS: print "->".join([s[k-3:k] for k in range(1,len(s)) if k%3==0 ])            
+            
+
+
+
+
+
+
+
+
+5) Implement any of the sorting technique
+
+import random
+def bubble_sort(items):
+    """ Implementation of bubble sort """
+    for i in range(len(items)):
+        for j in range(len(items)-1-i):
+            if items[j] > items[j+1]:
+                items[j], items[j+1] = items[j+1], items[j]
+    
+random_items = [random.randint(-50, 100) for c in range(32)]
+
+print 'Before: ', random_items
+bubble_sort(random_items)
+print 'After : ', random_items
+
+
+
+
+
+
