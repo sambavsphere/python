@@ -1,0 +1,134 @@
+1. copy 1 file content in to another file
+2. delete,replace mentioned word from a file 
+3. number of lines, words, characters
+4. convert .txt file in .json
+5.l=[1,2,3] just make it a string.
+6.l=[1,2,3,[4,5,6],7,[8,9,10]] for single dimentional list
+
+Assignment 7: 
+find the start position of the largest block of repeated characters in a given string
+Ans:
+import re
+s=raw_input("Enter String: ")
+max_word=max([max(re.findall(c+'+',s),key=len) for c in set(s)],key=len)
+print "max_word: ",max_word, "length: ",len(max_word),"index: ",s.find(max_word)
+
+Assignment 8:
+get union and intersection of lists:
+l=[1,2,3,4,5,6]
+l1=[1,7,2,8,9]
+print set(l) & set(l1)
+print set(l) | set(l1)
+
+Assignment 9:
+input: fun(5)
+output: [1,2,3,4,3,2,1]
+def fun(v):
+    l=range(v)
+    l1=range(v)
+    l1.reverse()
+    return l+l1[1:]
+
+Assignment 10:
+ Make two dimentional list to one dimentional:
+l2=[]
+l=[1,2,3,[1,2,3],4,[5,7]]
+for i in l:
+	if isinstance(i,list):
+		l2.extend(i)
+	else:
+		l2.append(i)
+print l2
+
+Assignment 11:
+input fun('abc')
+output: [[],][a],[b],[c],[a,b],[b,c],[c,a],[a,b,c]]
+def fy(s):
+    result=[]
+    result.append([])
+    for i in range(len(s)+1): 
+        for j in range(i):
+            result.append(list(s[j:i]))
+    result.append([s[-1],s[0]])
+    print result
+fy('abc')
+
+Assignment 12:
+Remove duplicates from the list:
+a=[1,2,3,2,3,4,1,,3,4]
+s=set(a)
+s1=s.copy()
+a=[s.pop() for i in s1][::1]
+
+Assignment 13:
+scores =  {"classScore":[("mohan", 80), ("satish", 90), ("purnesh", 40), ("venkat", 30)]} sort the list in assignding order of marks..
+import operator
+scores =  {"classScore":[("mohan", 80), ("satish", 90), ("purnesh", 40), ("venkat", 30)]}
+scores1=    {"classScore": sorted(scores['classScore'],key=operator.itemgetter(1))}
+print  scores1
+
+Asignment 14:
+Write the difference between sort and sorted method in python
+	alist = [1, 3, 2]
+	alist.sort()
+	alist
+	output:
+	[1, 2, 3]
+		alist.sorted()
+			Traceback (most recent call last):
+			  File "<stdin>", line 1, in ?
+			AttributeError: 'list' object has no attribute 'sorted'
+		 alist = [1, 3, 2]
+		sorted(alist)
+			output:
+			[1, 2, 3]
+
+	sort() is a method of list.  As explained, it sorts the list in place
+	and it does not return the list as a reminder of that fact.
+
+	sorted() is a builtin function, not a method on list, because it's
+	more general taking any iterator as its first argument (for example an
+	open file), not just a list.  It of course does return a list.
+
+Assignment 15:
+Can we use a list for a key in dictionary ?
+Ans: No, because list is mutable object. Dictionary accpet only immutable object as a key.
+
+Assignment 16:
+
+           1) My name is, Nagesh
+           2) I am from , Hyderabad
+           3) I studied MCA in, CBIT
+read the lines in text file and write data to a csv file with question in one column and responses in other column.
+
+Ans:
+try:
+    f1=open("text1.txt")
+    f2=open("text2.csv",'w')
+    f2.write("question,answer\n")
+    for i in f1.readlines():
+        f2.write(i)
+except Exception as err:
+    print err
+finally:
+    f1.close()
+    f2.close()
+
+
+Assignment 17:
+l=['1','2','3'] get the sum of the list
+sum(map(int,l))
+
+Assignment 18:
+l1=[1,2,3,4] l2=[5,6,7,8] sum of two lists
+[i+j for (i,j) in zip(l2,l1)]
+
+Assignment:19
+Make two dimentional list to one dimentional:
+input: fun(5)
+output: [1,2,3,4,3,2,1]
+
+Assignment:20
+input fun('abc')
+output: [[],][a],[b],[c],[a,b],[b,c],[c,a],[a,b,c]]
+
