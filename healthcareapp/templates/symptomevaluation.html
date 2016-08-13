@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>symptomevaluation </title>
+</head>
+<body>
+<p>{{ evaluated_diseases }}</p>
+<form action="" method="POST"> 
+	{% for symptom in symptoms  %}
+	<input type="checkbox" name="{{ symptom }}" value="{{ symptom }}">: <span>"{{ symptom }}"</span><br>
+	{%endfor%}
+	<input type="submit" value="Check your disease">
+	
+</form>
+</body>
+</html>
