@@ -1,7 +1,37 @@
+Assigments on if while and for statement:
+................................................................................
+a. Check whether given number is prime,even,perfect,odd number
+b. Take the input from the user for(Total number of people, toatl number of busses, Number of seats for bus). Based on the input
+	Deside whether there is sufficient busses or not.
+c. Print the first 100 odd numbers
+d. Determine the factors of a number entered  by the user
+e. Play a number guessing game (User enters a guess, you print YES or Higher or Lower)
+F. Take two numbers from the user a,b check whether a is divisible by b or not?
+g. Given an age, figure out whether someone's a baby, toddler, child, teenager, adult or old codger.
+h. Find the sum of all the multiples of 3 or 5 below 1000
+....................................................................................
+
+Assignments on Files:
+.....................................................................................
+
 1. copy 1 file content in to another file
 2. delete,replace mentioned word from a file 
 3. number of lines, words, characters
 4. convert .txt file in .json
+5. Take three columns disease, symptoms, advice in a file and fill the details
+	Ask the user to enter symptoms. Based on this symptoms Suggest the user to what disease it may be and few advices.
+6. Take employees info (id,name, age, adress, sal, height, weight)
+	a. Take id, provide employee information for that id.
+	b. find out average salary.
+	c. find out which age, address taking the heighest salary 
+	d. find out every employee BMI value
+	e. Finally find out the Organization overall BMI
+
+
+..........................................................................................
+
+Assignments on Datastructures:
+............................................................................
 5.l=[1,2,3] just make it a string.
 6.l=[1,2,3,[4,5,6],7,[8,9,10]] for single dimentional list
 
@@ -256,3 +286,18 @@ if a>=3:
     print "1"*a
 else:
     print "Invalid number"
+
+Assignment: 28
+l=['a','B','C','A','c'] sort this list
+Ans:
+l.sort(key=lambda x:x.lower())
+
+Assignment: 29
+Find out the third occurance of 2 in the below list
+Ans: 
+l=[1,2,3,4,2,3,4,5,2,3,4,5,6,2]
+j=0
+for i in range(3):
+    j=l.index(2,j+1)
+print j
+............................................................................................................
