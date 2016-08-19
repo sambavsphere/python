@@ -300,4 +300,28 @@ j=0
 for i in range(3):
     j=l.index(2,j+1)
 print j
+
+Assignment 30:
+	list = [ [ ] ] * 5
+	 list  # output?
+	list[0].append(10)
+	 list  # output?
+	list[1].append(20)
+	 list  # output?
+	list.append(30)
+	 list  # output?
+
+
+Assignment 31:
+def extendList(val, list=[]):
+    list.append(val)
+    return list
+
+list1 = extendList(10)
+list2 = extendList(123,[])
+list3 = extendList('a')
+
+print "list1 = %s" % list1
+print "list2 = %s" % list2
+print "list3 = %s" % list3
 ............................................................................................................
