@@ -1,0 +1,57 @@
+1. what are the basic modules you have worked with python?
+2. why shoud we use python datastructures in application development?
+3. what are the list,tuple,dict functions you have used in your app development?
+4. sort a list of ['a','B','D','c','C']
+5. l=['a','b','c','d','a','e','a','e','s'] find out the third occurance of a?
+6. f=open('f1.txt')
+   data=f.read()
+   data1=f.read()
+   print data1.
+   output:?
+7. f=open('f1.txt','w')
+   f.write("data in a file")
+   What content i can see if i open a file?
+8. Do you know about logging module?
+9. l=[1,2,3,4] write a program to generate one more list by adding 100 to existing list using list comprehensions?
+10. l=range(10) l1=range(10,20) WAP to add two lists?
+11. [1,2,3,[4,5,6],7,[8,9,10]] convert this in to single dimentional list.
+12. print 012 ?
+13. what is GIL?
+14. Tell us about python.
+15. l=[1,2,3,1,2,3,2,3,4,1] remove duplications.
+16. s="str123" s[0]=10
+17. print int("12.34")
+18. print range(1,-10)
+19. what is generator?
+20. what is lambda?
+21. what is map?
+22. Difference between dict items and iteritems and viewitems
+23. Difference between tuple and list
+25. What is class?
+26. what is mutable and immutable objects? example..
+27. Advantages of modular approach..
+28. difference between for and while loop in python.
+29. what is use of slicing in python?
+30. difference between list and numpy array?
+31. How can you sort the dictionary?
+32. What do you mean by automatic memory management in python?
+33. Difference between yield and return statements?
+34. Difference between %r ans %s format specifiers?
+35. what's hapend when i open a file in write mode and close it?
+36. what is the defalut mode of file open function?
+37. How do you store integers in file?
+38. Use of translate function in string?
+39. What is the use of encode function in string?
+40. does string is mutable or immutable object?
+41. Difference between list and dict?
+42. What is * args in function?
+43. What is *kwargs in function? 
+
+
+
+
+
+
+ 
+
+
