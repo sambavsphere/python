@@ -46,6 +46,9 @@
 41. Difference between list and dict?
 42. What is * args in function?
 43. What is *kwargs in function? 
+44. input="abcd" output="aaabacadbabbbcbdcacbcccddadbdcdd"
+45. input="abcd" write a function to findout the permuations of the string?
+
 
 
 
