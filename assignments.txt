@@ -39,7 +39,7 @@ Assignments on Datastructures:
 ............................................................................
 1. input: google
 	output: {'g':2,'o':2,'l':1,'e':1} count of each character without using built in count functions
-
+2. Convert n dimentional list to single dimentiona list.
 5.l=[1,2,3] just make it a string.
 6.l=[1,2,3,[4,5,6],7,[8,9,10]] for single dimentional list
 
