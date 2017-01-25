@@ -31,6 +31,8 @@ Assignments on Files:
 	c. find out which age, address taking the heighest salary 
 	d. find out every employee BMI value
 	e. Finally find out the Organization overall BMI
+7.read the file which contains the size greater than your ram size
+8. Read ten gb movie
 
 
 ..........................................................................................
