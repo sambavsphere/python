@@ -112,3 +112,25 @@ Menu:
       Source not found: Skip the copy
       destination found: skip/replace
      maintain a remarks log. What are the files skiped from copy because no source file found. What are the files skip/replaced because of destination file foun in the specified path
+70. create user table in databaes with id,name columns and insert the below data in to table
+# take a list [2,'name2']
+# take a dictionary: {'id':3,"name":'name3'}
+# string "4;name4"
+# [{'id':5,'name':'name5'},{'id':6,"name":'name6'}]
+
+71.Wap program to operate below menu by user by connecting a remote system.
+Program should ask for below details.
+host:
+user:
+password:
+sudo password:
+take the details connect to remote system and operate this menu:
+ 1. list the softwares installed
+ 2. kill a process
+ 3. restart the remote system
+ 4. Ram usage
+ 5. CPU usage
+ 6. Free space in specified disk
+ 7. restart the process
+ 8. check whether speciifed software installed in the remote system or not.
+ 9. Pass the software and installtion steps to remote system and install the softwre in remote system.
