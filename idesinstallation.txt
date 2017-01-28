@@ -1,0 +1,72 @@
+python ides installation
+Windows:
+	python installation:
+		https://www.python.org/downloads/
+		download the file. double click it
+		with this file will get idle (gui version python editor)
+		to run python files from cmd for the firstime set a path
+		-> copy the python path
+		-> right click on mycomputer -> advanced settings -> Environment variables 
+		-> under system variables search for "path" variable. select it and edit the path 
+		and click on apply. 
+
+	
+	Module installation:
+		windows: Go to  pythonfolder/Scripts/  from the command prompt and type below commands.
+		pip install modulename
+		conda install modulename
+        If you are unable to see Scripts folder inside python folder. Download get-pip using the link 		https://pip.pypa.io/en/stable/installing/.  Download get-pip and open with python.exe or run with 		idle or run with python command. Open python folder, could find scripts folder.
+ 
+	Run a file:
+		open terminal and type
+		python pathofafile
+
+Linux:  
+	python installation 
+
+	No need to install python in linux environment. os itself come up 
+	with default version most of times its second version of python
+	If you want to install specific version of python and ides
+	ubuntu/
+		apt-get install python/python3 idle idle3 ipython ipython-notebook
+	cent/
+	yum install python/python3 idle idle3 ipython ipython-notebook
+
+	Run a file:
+		python "path of a file" without quotaions
+
+	
+
+install sublimetext3:
+	linux: ubuntu: Run the below commands
+		sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
+		sudo apt-get update; 
+		sudo apt-get install -y sublime-text-installer
+	Windows:
+		https://www.sublimetext.com/3
+		Goto above link and click on windows 64it or windows(depends on your os bit version)
+		This will downloads a .exe file. just doble click on this file to install it
+
+
+
+
+postgres installation steps:
+In linux:
+	sudo apt-get install postgresql postgresql-contrib
+
+in windows:
+	http://www.enterprisedb.com/products-services-training/pgdownload#windows
+         Download package according to your system requirements.
+
+Apache configuration:
+In linux:
+	1) install apache2 - sudo apt-get install apache2
+	2) create /usr/lib/cgi-bin directory to dump all you script files. Not the script files should be executable.
+	3) To enable the CGI module run these two commands:
+	# sudo a2enmod cgi
+	# sudo service apache2 restart
+in windows:
+Download .exe file from the below url and install it.
+	http://httpd.apache.org/download.cgi
+psycopg2 installation:
+ conda install psycopg2
