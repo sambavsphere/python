@@ -1,0 +1,32 @@
+from flask import Flask, request
+from flask.ext.spi import status
+import json
+
+app = Flask(__name__)
+
+@app.route("/users",methods=['GET','POST','PUT','DELETE'])
+def index():
+	if request.method == "POST":
+		data = request.json()
+		# write post code here
+		# return response
+		return "context",status.HTTP_201_CREATED
+		# read about status attribute
+	if reques.method == "GET":
+		filter  = request.values
+		# get the data from table using connction and filter objects
+		# data should be in json format
+		return json.dumps(data)
+	if reques.method == "PUT":
+		filter  = request.values
+		# write a modification code here
+		return "context",status.HTTP_200_OK
+	if reques.method == "DELETE":
+		filter  = request.values
+		# get the data from table using connction and filter objects
+		# write a delete code here
+		return "context",status.HTTP_200_OK
+
+
+if __name__ == "__main__":
+	app.run(debug=True, host="0.0.0.0")
