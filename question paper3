@@ -1,0 +1,114 @@
+1. def outer():
+	def inner():
+		return 10
+	return inner
+WAP to call inner function
+
+2. def fun():
+	return “this is function”
+    f1=fun
+    f2=fun()
+    what is the type(f1)?
+    What is the type(f2)?
+
+3. f= lambda x:x**2
+    what is the type(f)
+
+4. def fun(a,b,x=20,y=30)
+	return a+b+x+y
+     WAP to pass values to a,b,y but not x.
+
+5. f=lambda x: 10 if x else 20
+    print f(10)
+   output?
+
+6. print  map(int,[‘c’,’d’],[12,13])
+    output?
+
+7.  l=[1,2,3,4]
+     print  l*3
+     output?
+
+8. l=[1,2,3,4]
+    a=l+[5,6]
+    b=l.append([5,6])
+    c=l.extend([5,6])
+what is the difference among a,b,c.
+Output of a,b,c,l?
+
+9. l=range(10,100,10)
+    print l[20]
+    print l[20:]
+    print l[20:0:-1]
+    print l[20:0]
+    output?
+
+10. what are the different ways to add an elements to a dictionary. Write an example program
+
+11. Write a program to perform stack operations using list?
+
+12. what are the default functions for tuple?
+13. list out string functions?
+
+14. What is the difference among dict.items(), dict.iteritems(), dict.viewitems()? Elaborate with an example.  
+
+15.  d= {1:100,1:1000}
+      print d[1] output?
+
+16. d={1:10,2:20}
+      print d[10]
+      print d.get(10)
+    what is the output?
+
+17. WAP to check given value is present in dictionary or not?
+
+18. s=”python”
+WAP to remove “o” from s.
+
+19. l=[i+10 if i>3 else i+20 for I in range(10) if I%2==0]
+      print l
+      output?
+
+20. if -10:
+   	print “-10”
+     else:
+	print “10”
+output?
+ 
+21.i=0
+      while i<10:
+           print I
+
+How many times above loop iterates?
+
+22. print “12” > “2”
+
+23. print 23<”2”
+
+24.Write a program to create a table, insert values, update values, delete values of the table. 
+All database operations code write in a file and call these operations in different file.
+Use db_operations.py and app.py file names.(5M)
+
+25. WAP to Connect to remote system and get the number of processes currently running in the system (3M)
+
+26. WAP to get a json data from browser. IF type usrl  http:localhost:8889 in the browser, then we should see any json data in the browser.(2M)
+
+27.  Write service program to check requested number is prime number or not using socket (3M)
+28. WAP to send request to the above program. (2M)
+29. WAP to do the below operations.(2M)
+    a.Open a file in write mode and fill the file with persons information in unstructured format
+    b. write a regular expression to fetch email and phone numbers.
+    
+
+29. WAP  to fetch ip addresses from the unstructured data?
+
+30. Write a class and constructor to create an instances like below
+	a. p1 = person(id=1,name=”ashok”,age=23,sal=56787)
+            b. p2 = person(id=2,age=24,adhar=23456)
+	c. p3 = person(id=4,pan=”brcp3456”,sal=23,age=45)	
+31. Write a class DB, to do all database operatons(insert, update, delete) for a table (5M)
+
+
+
+
+     
