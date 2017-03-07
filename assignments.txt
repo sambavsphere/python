@@ -112,3 +112,34 @@ Menu:
       Source not found: Skip the copy
       destination found: skip/replace
      maintain a remarks log. What are the files skiped from copy because no source file found. What are the files skip/replaced because of destination file foun in the specified path
+     
+     OOPS
+     
+70. Write a class(DB) program to create a table, insert values, update values, delete values of the table. 
+All database operations code write in a file(db_operations.py) and call these operations in another file( app.py).
+In app.py create instance of the DB class and call all the methods by passing some data.
+Note: if you don’t have knowledge on db operations then write for file operations.
+
+71. write a program to do registration.
+     Write a methods in a class DB to open database connection and insert details in to database table. 
+Write a Model parent class and implement a create method. Call a database insert method into the create  method. Write child class person for Model and override method create method and call the parent(Model) class create method in the child(person) 
+create an instance of person class and call the create method.
+
+72. create a user defined datatype, and provide functionalities of addition substraction and multiplication. Create three instances(obj1,obj2,obj3) and print an output of obj1+obj2+obj3, obj1-obj2-obj3, obj1*obj2*obj3  
+
+73. addition, substraction, multiplication operations are not supported by dictionary. Write a program to provide addition, substraction, and  multiplication operations to dictionary. Write your own definition for operations.
+
+74. write a class that can create only one object. IF create one more object then it should written existing object but not new. Create three instances and print id’s of the instances. All the id’s should show same address.
+
+75. implement class method and instance method and static method in a class with an example. Create a instance and call all the methods. Write down what is class method and instance method and static method.
+
+76.  write a class program to demonstrate method overloading in python using below scenario.
+ 	Write a class and constructor to create an instances like below
+	a. p1 = person(id=1,name=”ashok”,age=23,sal=56787)
+            b. p2 = person(id=2,age=24,adhar=23456)
+	c. p3 = person(id=4,pan=”brcp3456”,sal=23,age=45)	
+make instance iterable and provide the operation sp1+p2, p1-p2. Give your own definition for the operations
+
+
+ 
+ 
