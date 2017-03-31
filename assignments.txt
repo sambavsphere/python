@@ -141,7 +141,7 @@ create an instance of person class and call the create method.
 make instance iterable and provide the operation sp1+p2, p1-p2. Give your own definition for the operations
 
 77. Remove duplicates elements of the list withoud using built in keywords and temporary list.
-
+78. WAP to replace perticular number of substings with a given destination string
 
  
  
