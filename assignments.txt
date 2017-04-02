@@ -143,5 +143,8 @@ make instance iterable and provide the operation sp1+p2, p1-p2. Give your own de
 77. Remove duplicates elements of the list withoud using built in keywords and temporary list.
 78. WAP to replace perticular number of substings with a given destination string
 79. WAP top remove substring form the given string without using replace function
-80 WAP to remove perticular element from a given list for all occurancers
+80  WAP to remove perticular element from a given list for all occurancers
+81. take two lists keys, values and form a dictionary
+82. delete more than one key value pair at a time.
+
  
