@@ -58,6 +58,11 @@ in windows:
 	http://www.enterprisedb.com/products-services-training/pgdownload#windows
          Download package according to your system requirements.
 
+To install psycopg2:
+     pip install psycopg2
+     	(or)
+     conda install psycopg2
+
 Apache configuration:
 In linux:
 	1) install apache2 - sudo apt-get install apache2
